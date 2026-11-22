@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horus X — Private and corporate travel</title>
+<meta name="description" content="Horus X arranges airport transfers, chauffeured travel and serviced residences for travel platforms, companies and private clients, with a Private Office for principals, families and delegations.">
+<link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/svg+xml" href="img/mark-foil.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://horusxglobal.com/">
+<meta name="theme-color" content="#070a13">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Horus X">
+<meta property="og:title" content="Horus X — Private and corporate travel">
+<meta property="og:description" content="Airport transfers, chauffeured travel and serviced residences for travel platforms, companies and private clients.">
+<meta property="og:url" content="https://horusxglobal.com/">
+<meta property="og:image" content="https://horusxglobal.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className='js'</script>
+<style>
+/*
+VOICE   quiet, exact, a company that answers for things; few words, no slogans
+IDEA    a night flight: the Earth lit in gold below, a falcon's view of every journey
+PICTURE one cinematic campaign in night navy and gold light, full bleed; the Earth from orbit carries the first screen
+COLOUR  night navy #070a13 and gold foil lead; ivory #eeeae3 fields for reading pages
+TYPE    Newsreader (display, light) + Archivo (text and the expanded wordmark)
+LAYOUT  a site of eight pages, each opening on its title; nothing on a page waits for scrolling to appear
+*/
+@font-face{font-family:"News";src:url(fonts/newsreader.woff2) format("woff2");font-weight:200 800;font-display:block}
+@font-face{font-family:"News";src:url(fonts/newsreader-italic.woff2) format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Arch";src:url(fonts/archivo.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:block}
+:root{color-scheme:dark;--ink:#070a13;--ink2:#0c1222;--bone:#eeeae3;--txt:#17181b;--body:#3a3a3c;--mut:#6b6862;--lt:rgba(238,234,227,.66);--brass:#b08d57;--champ:#d6c294;--line:rgba(23,24,27,.16);--lineL:rgba(238,234,227,.16);--foil:linear-gradient(115deg,#7d6034 0%,#d9c08a 30%,#f3e3b8 48%,#c3a36a 66%,#6f5430 100%);--pad:max(5vw,20px);--hh:68px;--ease:cubic-bezier(.19,1,.22,1)}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 17px/1.6 "Arch",system-ui,sans-serif;font-stretch:100%;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul,ol,figure,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.d{font-family:"News",Georgia,serif;font-weight:300;letter-spacing:-.022em;line-height:1.04;text-wrap:balance}
+.lbl{font-size:13.5px;color:var(--mut)}
+.dark .lbl,.ink .lbl{color:var(--lt)}
+.wrap{padding-inline:var(--pad)}
+.light{background:var(--bone);color:var(--txt)}
+.dark{background:var(--ink);color:var(--bone)}
+.sec{padding-block:clamp(72px,10vw,150px)}
+.ul{background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:40px;border:0;background:var(--ink);color:var(--champ);font-weight:500;font-size:15px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.dark .btn,.band .btn,.phd .btn{background:var(--foil);color:#17120a;font-weight:600}
+.gx{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.btn.ghost{background:none;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.h2{font-size:clamp(34px,4.4vw,68px);max-width:18ch}
+.lead{font-size:clamp(17px,1.5vw,21px);max-width:56ch}
+.light .lead,.light .tx{color:var(--body)}
+.dark .lead,.dark .tx{color:var(--lt)}
+.more{display:inline-block;margin-top:28px;font-size:15px}
+.tx .ul,.desk .ad a{display:inline-block;padding-top:8px}
+
+/* pages */
+.js .pg{display:none}.js .pg.cur{display:block}
+main{padding-top:var(--hh)}
+
+/* opening */
+.veil{display:none}
+.js .veil{position:fixed;inset:0;z-index:100;background:var(--ink);display:grid;place-items:center}
+.rdy .veil{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease .25s,visibility 0s linear .7s}
+.rdy .veil div{opacity:0;transition:opacity .25s ease}
+.veil div{display:grid;justify-items:center;gap:22px}
+.veil img{width:64px;height:auto}
+.veil i{display:block;width:140px;height:1px;background:var(--foil)}
+.veil span{font:600 12px "Arch",sans-serif;font-stretch:125%;letter-spacing:.32em;padding-left:.32em;color:var(--champ)}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:50;height:var(--hh);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--pad);background:var(--ink);border-bottom:1px solid rgba(238,234,227,.09)}
+.wm{display:flex;align-items:center;gap:12px;font:600 15px "Arch",sans-serif;font-stretch:125%;letter-spacing:.06em;min-height:44px}
+.wm img{width:34px;height:33px}
+.wm .gx{background:none;color:var(--champ);-webkit-text-fill-color:var(--champ)}
+.nav{display:flex;gap:clamp(16px,2.2vw,34px);font-size:14px}
+.nav a{color:rgba(238,234,227,.78);padding:8px 0}
+.nav a:hover,.nav a[aria-current]{color:var(--bone)}
+.nav a[aria-current]{box-shadow:0 1px 0 var(--brass)}
+.cta{font-size:14px;padding:10px 18px;border-radius:40px;border:1px solid transparent;background:linear-gradient(var(--ink),var(--ink)) padding-box,var(--foil) border-box;color:var(--champ);white-space:nowrap}
+.mb{display:none;background:none;border:0;font-size:14px;cursor:pointer;padding:10px 0;min-height:44px;min-width:44px;text-align:right}
+.menu{position:fixed;inset:0;z-index:60;background:var(--ink);padding:calc(var(--hh) + 20px) var(--pad) 32px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;overflow-y:auto;visibility:hidden}
+.menu.open{visibility:visible}
+.menu nav{display:grid;gap:2px}
+.menu nav a{font:300 clamp(30px,8.6vw,40px)/1.22 "News",Georgia,serif;letter-spacing:-.02em;padding:4px 0}
+.menu .x{position:absolute;top:calc((var(--hh) - 44px)/2);right:var(--pad);display:block}
+
+/* home hero */
+.hero{position:relative;height:calc(100vh - var(--hh));height:min(calc(100svh - var(--hh)),880px);min-height:540px;overflow:hidden;background:#1a191b}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,10,19,.2) 0,rgba(7,10,19,0) 30%,rgba(7,10,19,.25) 55%,rgba(7,10,19,.94) 100%)}
+.hero .in{position:absolute;inset:auto 0 0;z-index:2;padding:0 var(--pad) clamp(26px,5vh,52px)}
+.hero h1{font-size:clamp(44px,7.4vw,124px);max-width:14ch;margin-bottom:clamp(20px,3vh,34px)}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}
+.ln>span{display:block}
+.js:not(.rdy) .hero .ln>span{transform:translateY(112%)}
+.rdy .hero .ln>span{animation:rise .95s var(--ease) .4s both}
+.rdy .hero .ln:nth-child(2)>span{animation-delay:.5s}
+@keyframes rise{from{transform:translateY(112%)}}
+.hero .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:22px 48px;border-top:1px solid var(--lineL);padding-top:20px}
+.hero .row p{max-width:54ch;color:rgba(238,234,227,.84);font-size:clamp(16px,1.25vw,18px)}
+.hero .links{display:flex;flex-wrap:wrap;gap:12px 26px;font-size:15px}
+
+/* plan bar */
+.plan{display:grid;grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr)) auto;gap:16px 20px;align-items:end;padding-block:28px;border-bottom:1px solid var(--line)}
+.plan-t{font:400 24px/1.15 "News",Georgia,serif;align-self:center}
+.f{display:grid;gap:6px;font-size:13.5px;color:var(--mut)}
+.f input,.f select,.f textarea{width:100%;min-height:48px;font-size:16px;color:var(--txt);background:#f7f4ee;border:1px solid rgba(23,24,27,.24);border-radius:0;padding:11px 14px;-webkit-appearance:none;appearance:none}
+.f select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2317181b' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+
+/* statement */
+.st-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,6vw,110px);align-items:end}
+.st-t{font-size:clamp(30px,3.8vw,58px);line-height:1.12}
+.st-grid .tx{display:grid;gap:18px}
+
+/* service list (home) */
+.sl a{display:grid;grid-template-columns:clamp(84px,9vw,132px) minmax(0,5fr) minmax(0,5fr);gap:clamp(16px,3vw,44px);align-items:center;padding:clamp(18px,2.2vw,30px) 0;border-bottom:1px solid var(--lineL)}
+.sl{border-top:1px solid var(--lineL);margin-top:clamp(36px,5vw,64px)}
+.sl img{width:100%;aspect-ratio:1;object-fit:cover;background:#1c1c1f}
+.sl h3{font:300 clamp(28px,3.4vw,52px)/1.06 "News",Georgia,serif;letter-spacing:-.02em}
+.sl p{color:var(--lt);font-size:16px}
+@media (hover:hover){.sl a:hover h3{color:var(--champ)}}
+
+/* split */
+.split{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,6vw,110px);align-items:center}
+.split figure{aspect-ratio:4/5;overflow:hidden;background:#1c1c1f}
+.light .split figure,.light .art figure{background:#d8d2c7}
+.split figure img,.art figure img{width:100%;height:100%;object-fit:cover}
+.split .tx{margin-top:22px;max-width:48ch}
+
+/* names */
+.cty{font:300 clamp(28px,3.6vw,56px)/1.18 "News",Georgia,serif;letter-spacing:-.02em;margin-top:clamp(28px,4vw,48px);max-width:24ch}
+.cty span{color:var(--mut)}
+.via{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:22px;font:600 clamp(18px,1.8vw,24px)/1.2 "Arch",sans-serif;font-stretch:108%;letter-spacing:-.01em}
+.hr{border:0;border-top:1px solid var(--line);margin:clamp(56px,8vw,110px) 0}
+
+/* clocks */
+.clk{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin-top:clamp(32px,4vw,56px);border-top:1px solid var(--lineL)}
+.clk div{padding:18px 0;border-bottom:1px solid var(--lineL)}
+.clk b{display:block;font:300 clamp(26px,2.6vw,38px)/1 "News",Georgia,serif;font-variant-numeric:tabular-nums;margin-top:8px}
+.clk span{font-size:13.5px;color:var(--lt)}
+
+/* closing */
+.end h2{font-size:clamp(46px,8.6vw,148px);line-height:.98;max-width:12ch}
+.end .btn{margin-top:clamp(32px,4vw,56px)}
+
+/* page head */
+.phd,.band{position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#080c17;color:var(--bone)}
+.phd{min-height:clamp(400px,64vh,660px)}
+.band{min-height:clamp(540px,92vh,880px)}
+.phd>img,.band>img,.cd>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.phd::after,.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,10,19,.88) 0,rgba(7,10,19,.5) 48%,rgba(7,10,19,.08) 100%),linear-gradient(0deg,rgba(7,10,19,.95) 0,rgba(7,10,19,0) 58%)}
+.phd .in,.band .in{position:relative;z-index:2;width:100%;padding:clamp(48px,7vw,100px) var(--pad) clamp(36px,5vw,72px)}
+.phd h1{font-size:clamp(42px,6.4vw,108px);max-width:15ch}
+.phd .lead,.band .lead{margin-top:clamp(18px,2vw,28px);color:rgba(238,234,227,.84)}
+.band h2{font-size:clamp(40px,6vw,100px);max-width:14ch}
+.band .seal{width:clamp(84px,9vw,124px);height:auto;margin-bottom:clamp(22px,3vw,36px)}
+@keyframes px{from{transform:translate3d(0,-6%,0) scale(1.14)}to{transform:translate3d(0,6%,0) scale(1.14)}}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){.px>img{animation:px linear both;animation-timeline:view();animation-range:entry 0% exit 100%}}}
+/* marquee */
+.mq{overflow:hidden;border-block:1px solid var(--lineL);padding:clamp(18px,2.4vw,30px) 0;background:var(--ink)}
+.mqt{display:flex;align-items:center;width:max-content;animation:mq 70s linear infinite;will-change:transform}
+.mqt span{font:300 clamp(34px,5vw,76px)/1 "News",Georgia,serif;letter-spacing:-.02em;padding:0 clamp(20px,2.6vw,44px);white-space:nowrap}
+.mqt b{font:600 clamp(14px,1.4vw,20px)/1 "Arch",sans-serif;font-stretch:125%}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:clamp(36px,5vw,64px)}
+.cd{position:relative;aspect-ratio:3/4;overflow:hidden;display:flex;align-items:flex-end;background:#0b1020;color:var(--bone)}
+.cd::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,10,19,.94) 0,rgba(7,10,19,.2) 55%,rgba(7,10,19,0) 100%)}
+.cd div{position:relative;z-index:2;padding:clamp(20px,2.4vw,34px)}
+.cd h3{font:300 clamp(28px,2.8vw,42px)/1.06 "News",Georgia,serif;letter-spacing:-.02em;margin-bottom:10px}
+.cd p{font-size:15.5px;color:rgba(238,234,227,.8)}
+.cd i{display:block;width:44px;height:1px;background:var(--foil);margin-bottom:18px}
+/* dark form */
+.dark .f{color:var(--lt)}
+.dark .f input,.dark .f select{background-color:#0f1629;border-color:rgba(214,194,148,.34);color:var(--bone)}
+.dark .f select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23d6c294' stroke-width='1.4'/%3E%3C/svg%3E")}
+.dark .f input::placeholder{color:rgba(238,234,227,.45)}
+.plan.dark{border-bottom:1px solid var(--lineL);background:var(--ink2)}
+/* hero media */
+.hm{position:absolute;inset:0;transform-origin:70% 40%;animation:drift 30s ease-in-out infinite alternate}
+.hm img,.hm canvas{position:absolute;inset:0;width:100%;height:100%}
+.hm img{object-fit:cover;object-position:70% 50%}
+@keyframes drift{to{transform:scale(1.07)}}
+.dark .cty span{color:var(--lt)}
+.dark .via{color:var(--bone)}
+.dark .hr{border-color:var(--lineL)}
+.strip{aspect-ratio:21/8;overflow:hidden;background:#1c1c1f}
+.strip img{width:100%;height:100%;object-fit:cover}
+
+/* articles (services) */
+.art{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,6vw,110px);align-items:start;padding-block:clamp(44px,6vw,88px);border-top:1px solid var(--line)}
+.art:first-child{border-top:0;padding-top:0}
+.art figure{aspect-ratio:4/5;overflow:hidden}
+.art h2{font-size:clamp(32px,4vw,60px)}
+.art .tx{margin-top:18px;max-width:52ch}
+.inc{margin-top:28px;border-top:1px solid var(--line)}
+.inc li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--body);font-size:16px}
+.art .lbl{margin-top:26px}
+
+/* rows */
+.rows{border-top:1px solid var(--line)}
+.dark .rows{border-color:var(--lineL)}
+.rw{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+.dark .rw{border-color:var(--lineL)}
+.rw h3{font:400 clamp(21px,2vw,27px)/1.2 "News",Georgia,serif}
+.rw p{font-size:16px;color:var(--body)}
+.dark .rw p{color:var(--lt)}
+.two{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,6vw,110px);align-items:start}
+.two>div>.tx{margin-top:20px;max-width:40ch}
+
+/* private office */
+.po{background:radial-gradient(120% 70% at 50% 0,#141d36 0,var(--ink) 62%);padding-block:clamp(64px,9vw,130px)}
+.card{position:relative;max-width:760px;margin:0 auto;background:#efe9de;color:#1d1b17;padding:clamp(44px,6vw,84px) clamp(26px,6vw,88px) clamp(40px,5vw,72px);text-align:center;box-shadow:0 40px 90px -40px rgba(0,0,0,.8)}
+.card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(29,27,23,.22);pointer-events:none}
+.card::after{content:"";position:absolute;inset:19px;border:1px solid rgba(29,27,23,.1);pointer-events:none}
+.card .seal{width:clamp(92px,11vw,128px);height:auto;margin:0 auto 26px}
+.card .ttl{font:600 13px/2 "Arch",sans-serif;font-stretch:125%;letter-spacing:.3em;padding-left:.3em}
+.bm{display:none}
+.card .by{font:italic 300 clamp(26px,3vw,40px)/1.15 "News",Georgia,serif;margin-top:10px}
+.card ul{margin-top:clamp(30px,4vw,48px);text-align:left}
+.card li{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,14fr);gap:18px;padding:20px 0;border-top:1px solid rgba(29,27,23,.16)}
+.card li:last-child{border-bottom:1px solid rgba(29,27,23,.16)}
+.card li b{font:400 20px/1.25 "News",Georgia,serif}
+.card li span{font-size:15.5px;line-height:1.55;color:#4a463e}
+.card .btn{margin-top:clamp(32px,4vw,48px);position:relative;z-index:1}
+.card .note{margin-top:16px;font-size:14px;color:#6b665c;position:relative;z-index:1}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(24px,4vw,64px);counter-reset:s;margin-top:clamp(36px,5vw,64px)}
+.steps.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.steps li{counter-increment:s;border-top:1px solid var(--line);padding:22px 0 30px}
+.dark .steps li{border-color:var(--lineL)}
+.steps li::before{content:counter(s);display:block;font:300 34px/1 "News",Georgia,serif;color:var(--brass);margin-bottom:16px;font-variant-numeric:lining-nums}
+.steps h3{font:400 23px/1.2 "News",Georgia,serif;margin-bottom:8px}
+.steps p{font-size:16px;color:var(--body)}
+.dark .steps p{color:var(--lt)}
+
+/* destinations */
+.dest{border-top:1px solid var(--lineL)}
+.dr{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr) 92px 84px;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--lineL)}
+.dr h2{font:300 clamp(28px,3.2vw,48px)/1.08 "News",Georgia,serif;letter-spacing:-.018em}
+.dr .gw{font-size:15px;color:var(--lt)}
+.dr time{font:300 clamp(22px,2vw,28px)/1 "News",Georgia,serif;font-variant-numeric:tabular-nums;text-align:right}
+.dr a{font-size:14.5px;text-align:right;color:var(--champ);padding:6px 0}
+.dh{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr) 92px 84px;gap:20px;padding:0 0 12px;font-size:13.5px;color:var(--lt)}
+.dh span:nth-child(3){text-align:right}
+
+/* partners */
+.cl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 clamp(20px,3vw,44px);margin-top:clamp(36px,5vw,64px)}
+.cl div{border-top:1px solid var(--line);padding:24px 0 8px}
+.cl h3{font:400 24px/1.2 "News",Georgia,serif;margin-bottom:12px}
+.cl p{color:var(--body);font-size:16px}
+.chan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(20px,3vw,44px);margin-top:clamp(32px,4vw,52px)}
+.chan li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.chan b{font:600 clamp(20px,1.9vw,27px)/1.1 "Arch",sans-serif;font-stretch:108%;letter-spacing:-.015em}
+.chan span{font-size:13.5px;color:var(--mut);text-align:right}
+.amb{font-size:clamp(28px,3.4vw,52px);line-height:1.12;max-width:26ch}
+
+/* tech */
+.ccy{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.ccy span{border:1px solid var(--line);border-radius:40px;padding:7px 16px;font-size:14.5px}
+
+/* company */
+.deed{max-width:820px;margin:0 auto}
+.deed h2{font-size:clamp(30px,3.6vw,52px);text-align:center}
+.deed .sub{text-align:center;margin-top:14px;color:var(--mut);font-size:15px}
+.deed ol{counter-reset:c;margin-top:clamp(36px,5vw,60px);border-top:1px solid var(--line)}
+.deed li{counter-increment:c;display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;padding:24px 0;border-bottom:1px solid var(--line)}
+.deed li::before{content:counter(c) ".";font:400 19px/1.5 "News",Georgia,serif;color:var(--mut)}
+.deed h3{font:italic 400 21px/1.4 "News",Georgia,serif;margin-bottom:6px}
+.deed li p{font:400 18.5px/1.55 "News",Georgia,serif;color:#2b2a28}
+.reg{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,6vw,110px);align-items:start}
+.reg .sd{display:grid;gap:24px;justify-items:start}
+.reg .sd img{width:128px;height:auto}
+.reg dl{border-top:1px solid var(--line)}
+.reg dl div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;padding:19px 0;border-bottom:1px solid var(--line)}
+.reg dt{color:var(--mut);font-size:15px}
+.reg dd{font:400 19px/1.45 "News",Georgia,serif}
+
+/* contact */
+.desks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(20px,3vw,44px)}
+.desk{border-top:1px solid var(--lineL);padding:24px 0 34px}
+.desk .ad{font:300 clamp(21px,2vw,29px)/1.2 "News",Georgia,serif;margin:10px 0 14px;overflow-wrap:anywhere}
+.cp{background:none;border:0;padding:8px 0;min-height:44px;font-size:14px;color:var(--champ);cursor:pointer;text-align:left}
+.light .cp{color:#7a5d2c}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;max-width:860px;margin-top:clamp(28px,4vw,48px)}
+.form .wide{grid-column:1/-1}
+.out{max-width:860px;margin-top:32px;padding:clamp(20px,3vw,32px);background:#f7f4ee;border:1px solid rgba(23,24,27,.2)}
+.out textarea{display:block;width:100%;min-height:230px;margin:14px 0 18px;font-size:15.5px;line-height:1.55;color:var(--txt);background:#fff;border:1px solid rgba(23,24,27,.2);border-radius:0;padding:14px;resize:vertical}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.msg{margin-top:14px;font-size:15px;color:#3d5a3a;min-height:1.6em}
+
+/* footer */
+.ft{padding:clamp(56px,8vw,104px) var(--pad) 26px;border-top:1px solid var(--lineL)}
+.ft .c4{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;font-size:15px;color:var(--lt)}
+.ft h4{margin:0 0 14px;font-weight:500;color:var(--bone);font-size:14px}
+.ft li{margin-bottom:6px}
+.ft li a,.ft li button{display:inline-block;padding:3px 0}
+.ft button{background:none;border:0;cursor:pointer;text-align:left}
+.ft a:hover,.ft button:hover{color:var(--bone)}
+.big{display:block;width:100%;height:auto;margin:clamp(48px,7vw,96px) 0 24px;fill:var(--bone)}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--lt);border-top:1px solid var(--lineL);padding-top:20px}
+dialog{max-width:620px;width:calc(100% - 40px);border:0;padding:clamp(26px,4vw,40px);background:var(--bone);color:var(--txt)}
+dialog::backdrop{background:rgba(7,10,19,.72)}
+dialog h3{font:400 30px/1.1 "News",Georgia,serif;margin-bottom:16px}
+dialog p{margin-bottom:14px;font-size:16px;color:var(--body)}
+
+@media (max-width:980px){
+ :root{--hh:60px}
+ .nav,.hd .cta{display:none}.mb{display:block}
+ .plan{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.plan-t,.plan .btn{grid-column:1/-1}
+ .st-grid,.split,.art,.two,.reg{grid-template-columns:minmax(0,1fr)}
+ .split figure,.art figure{aspect-ratio:3/2}
+ .clk{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .cards{grid-template-columns:minmax(0,1fr)}.cd{aspect-ratio:5/4}
+ .phd::after,.band::after{background:linear-gradient(0deg,rgba(7,10,19,.96) 0,rgba(7,10,19,.72) 38%,rgba(7,10,19,.12) 100%)}
+ .steps,.steps.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cl{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .chan{grid-template-columns:minmax(0,1fr)}
+ .desks{grid-template-columns:minmax(0,1fr)}
+ .ft .c4{grid-template-columns:1fr 1fr}
+ .dr,.dh{grid-template-columns:minmax(0,1fr) 78px 70px}
+ .dr .gw{grid-column:1/-1;grid-row:2;margin-top:-10px}
+ .dh span:nth-child(2){display:none}
+}
+@media (max-width:700px){.hero::after{background:linear-gradient(180deg,rgba(7,10,19,.15) 0,rgba(7,10,19,0) 22%,rgba(7,10,19,.45) 52%,rgba(7,10,19,.96) 80%)}.hm img{object-position:50% 38%}}
+@media (max-width:600px){
+ body{font-size:16px}
+ .plan{grid-template-columns:minmax(0,1fr)}
+ .sl a{grid-template-columns:76px minmax(0,1fr);gap:6px 16px;align-items:start}.sl img{grid-row:1/3}.sl p{grid-column:2}
+ .rw{grid-template-columns:minmax(0,1fr);gap:6px}
+ .steps,.steps.four,.cl,.form{grid-template-columns:minmax(0,1fr)}
+ .bm{display:inline}
+ .card li{grid-template-columns:minmax(0,1fr);gap:6px}.card::before{inset:9px}.card::after{inset:13px}
+ .deed li{grid-template-columns:30px minmax(0,1fr)}
+ .reg dl div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .acts .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.mqt{flex-wrap:wrap;width:auto}.js:not(.rdy) .hero .ln>span{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="veil" aria-hidden="true"><div><img src="img/mark-foil.svg" alt="" width="64" height="63"><i></i><span>HORUS X</span></div></div>
+
+<header class="hd">
+ <a class="wm" href="#home" aria-label="Horus X, home"><img src="img/mark-foil.svg" alt="" width="34" height="33"><span>HORUS <span class="gx">X</span></span></a>
+ <nav class="nav" aria-label="Main">
+  <a href="#services">Services</a><a href="#private-office">Private Office</a><a href="#destinations">Destinations</a><a href="#partners">Partners</a><a href="#technology">Technology</a><a href="#company">Company</a>
+ </nav>
+ <a class="cta" href="#contact">Enquiries</a>
+ <button class="mb" id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+ <button class="mb x" id="mx">Close</button>
+ <nav aria-label="Mobile">
+  <a href="#home">Home</a><a href="#services">Services</a><a href="#private-office">Private Office</a><a href="#destinations">Destinations</a><a href="#partners">Partners</a><a href="#technology">Technology</a><a href="#company">Company</a><a href="#contact">Enquiries</a>
+ </nav>
+ <p class="lbl" style="color:var(--lt)">Horus X Ltd. Registered in England and Wales, company no. 16483511</p>
+</div>
+
+<main>
+
+<!-- HOME -->
+<section class="pg cur" data-page="home" data-title="Horus X — Private and corporate travel">
+ <div class="hero">
+  <div class="hm"><picture><source media="(max-width:700px)" srcset="img/orbit-p.webp 941w, img/orbit-p-xl.webp 1411w" sizes="120vw" width="941" height="1672"><img id="himg" src="img/orbit.webp" srcset="img/orbit.webp 1672w, img/orbit-xl.webp 2508w" sizes="110vw" alt="The Earth at night seen from orbit, its cities lit in gold, with sunrise on the horizon" width="1672" height="941" fetchpriority="high"></picture><canvas id="hcv" aria-hidden="true"></canvas></div>
+  <div class="in">
+   <h1 class="d"><span class="ln"><span>Every journey,</span></span><span class="ln"><span>seen from above.</span></span></h1>
+   <div class="row">
+    <p>Horus X arranges airport transfers, chauffeured travel and serviced residences for travel platforms, companies and private clients. One contract, and one desk that answers for the whole journey.</p>
+    <div class="links"><a class="ul" href="#contact">Plan a journey</a><a class="ul" href="#private-office">The Private Office</a></div>
+   </div>
+  </div>
+ </div>
+
+ <form class="plan wrap dark" id="plan" aria-label="Plan a journey">
+  <p class="plan-t">Plan a journey</p>
+  <label class="f">Service<select name="s"><option>Airport transfers</option><option>Chauffeur by the hour</option><option>Serviced residences</option><option>Private Office arrangements</option><option>Several of these</option></select></label>
+  <label class="f">Country<select name="c"><option>France</option><option>Spain</option><option>United States</option><option>Türkiye</option><option>Italy</option><option>Mexico</option><option>United Kingdom</option><option>Germany</option><option>Japan</option><option>Greece</option><option>Elsewhere</option></select></label>
+  <label class="f">Dates<input name="d" placeholder="e.g. 3 to 7 March" autocomplete="off"></label>
+  <button class="btn" type="submit">Continue</button>
+ </form>
+
+ <div class="mq" aria-hidden="true"><div class="mqt"><span>Paris</span><b class="gx">X</b><span>Madrid</span><b class="gx">X</b><span>New York</span><b class="gx">X</b><span>Istanbul</span><b class="gx">X</b><span>Rome</span><b class="gx">X</b><span>Mexico City</span><b class="gx">X</b><span>London</span><b class="gx">X</b><span>Frankfurt</span><b class="gx">X</b><span>Tokyo</span><b class="gx">X</b><span>Athens</span><b class="gx">X</b><span>Paris</span><b class="gx">X</b><span>Madrid</span><b class="gx">X</b><span>New York</span><b class="gx">X</b><span>Istanbul</span><b class="gx">X</b><span>Rome</span><b class="gx">X</b><span>Mexico City</span><b class="gx">X</b><span>London</span><b class="gx">X</b><span>Frankfurt</span><b class="gx">X</b><span>Tokyo</span><b class="gx">X</b><span>Athens</span><b class="gx">X</b></div></div>
+
+ <div class="dark sec wrap">
+  <div class="st-grid">
+   <h2 class="d st-t">We look after the part of travel people remember most: the moment they land, the drive that follows and the door they open at the end of it.</h2>
+   <div class="tx">
+    <p>Our clients put their name on every trip they sell. We work behind that name, on time and in writing, so that the traveller never has to wonder who is responsible.</p>
+    <p>Each booking is confirmed, assigned and followed through to the end by the same desk, and settled on one invoice.</p>
+    <p><a class="ul" href="#partners">How we work with partners</a></p>
+   </div>
+  </div>
+  <div class="cards">
+   <a class="cd px" href="#services"><img src="img/arrival.webp" srcset="img/arrival.webp 1672w, img/arrival-xl.webp 2508w" sizes="(max-width:980px) 130vw, 75vw" alt="A black executive car waiting outside an airport terminal at dusk as an airliner climbs away" width="1672" height="941" style="object-position:84% 50%"><div><i></i><h3>Airport transfers</h3><p>Met at arrivals and driven to the door, from a single guest to a full delegation.</p></div></a>
+   <a class="cd px" href="#services"><img src="img/chauffeur.webp" srcset="img/chauffeur.webp 1672w, img/chauffeur-xl.webp 2508w" sizes="(max-width:980px) 130vw, 75vw" alt="A chauffeur in a dark suit and white gloves holding a car door open outside a hotel" width="1672" height="941" style="object-position:66% 50%"><div><i></i><h3>Chauffeur by the hour</h3><p>A dedicated car and driver for meetings, roadshows and days that change shape as they go.</p></div></a>
+   <a class="cd px" href="#services"><img src="img/residence.webp" srcset="img/residence.webp 1672w, img/residence-xl.webp 2508w" sizes="(max-width:980px) 130vw, 75vw" alt="A residence lounge at dusk with a view across the water to a city skyline" width="1672" height="941" style="object-position:55% 50%"><div><i></i><h3>Serviced residences</h3><p>Apartments we manage, prepared before arrival and looked after for the length of the stay.</p></div></a>
+  </div>
+ </div>
+
+ <div class="band px">
+  <img src="img/falcon.webp" srcset="img/falcon.webp 1672w, img/falcon-xl.webp 2508w" sizes="(max-width:700px) 340vw, 105vw" alt="A peregrine falcon in flight above the clouds at sunrise" width="1672" height="941" style="object-position:68% 45%">
+  <div class="in">
+   <img class="seal" src="img/seal-foil.svg" alt="" width="124" height="125">
+   <h2 class="d">Named for the falcon.</h2>
+   <p class="lead">Horus, the falcon of the sky, was said to see everything beneath him. We keep the same watch over every journey we arrange, from the first message to the last door.</p>
+  </div>
+ </div>
+
+ <div class="band px">
+  <img src="img/jet.webp" srcset="img/jet.webp 1672w, img/jet-xl.webp 2508w" sizes="(max-width:700px) 340vw, 105vw" alt="A private jet with its stairs down at dusk and a black car waiting beside it" width="1672" height="941" style="object-position:75% 60%">
+  <div class="in">
+   <h2 class="d">Discretion is part of the service.</h2>
+   <p class="lead">Vetted drivers, well-kept cars, and guest details shared only with the people who need them. For principals, families and delegations there is the Private Office: one named manager, by appointment.</p>
+   <a class="btn" style="margin-top:32px" href="#private-office">The Private Office</a>
+  </div>
+ </div>
+
+ <div class="band px">
+  <img src="img/city.webp" srcset="img/city.webp 1672w, img/city-xl.webp 2508w" sizes="(max-width:700px) 340vw, 105vw" alt="A coastal business district at dusk seen from the air" width="1672" height="941" style="object-position:74% 55%">
+  <div class="in">
+   <h2 class="d">Where we take travellers</h2>
+   <p class="cty" style="margin-top:22px">France, Spain, the United States, Türkiye, Italy, Mexico, the United Kingdom, Germany, Japan and Greece.</p>
+   <a class="btn" style="margin-top:32px" href="#destinations">Destinations and local times</a>
+  </div>
+ </div>
+
+ <div class="dark sec wrap">
+  <p class="lbl">Bookings reach us through</p>
+  <div class="via"><span>Airbnb</span><span>Booking.com</span><span>Vrbo</span><span>elife</span><span>Mozio</span><span>Talixo</span><span>Welcome Pickups</span><span>GET-E</span><span>Limousine Center</span></div>
+  <a class="more ul" href="#partners">Partners and platforms</a>
+ </div>
+
+ <div class="band px">
+  <img src="img/eye.webp" srcset="img/eye.webp 1672w, img/eye-xl.webp 2508w" sizes="(max-width:700px) 340vw, 105vw" alt="Close view of a falcon's head and eye" width="1672" height="941" style="object-position:78% 40%">
+  <div class="in">
+   <h2 class="d">Run on our own systems, checked by people.</h2>
+   <p class="lead">Software we built for this work follows every booking from request to receipt. A member of our desk answers for it, at any hour.</p>
+   <a class="btn" style="margin-top:32px" href="#technology">How a booking is handled</a>
+  </div>
+ </div>
+
+ <div class="dark sec wrap">
+  <h2 class="d h2">One desk, across time zones</h2>
+  <div class="clk" aria-label="Local times"><div><span>London</span><b data-tz="Europe/London">--:--</b></div><div><span>Paris</span><b data-tz="Europe/Paris">--:--</b></div><div><span>Istanbul</span><b data-tz="Europe/Istanbul">--:--</b></div><div><span>Dubai</span><b data-tz="Asia/Dubai">--:--</b></div><div><span>Tokyo</span><b data-tz="Asia/Tokyo">--:--</b></div><div><span>New York</span><b data-tz="America/New_York">--:--</b></div></div>
+ </div>
+
+ <div class="dark wrap end" style="padding-block:clamp(40px,6vw,90px) clamp(80px,11vw,160px)">
+  <h2 class="d">Start with a conversation.</h2>
+  <a class="btn" href="#contact">Make an enquiry</a>
+ </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pg" data-page="services" data-title="Services — Horus X">
+ <div class="phd px">
+  <img src="img/cabin.webp" srcset="img/cabin.webp 1672w, img/cabin-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="The rear cabin of an executive car at night, cream leather seats and city lights beyond" width="1672" height="941" style="object-position:70% 50%">
+  <div class="in"><h1 class="d">Ground travel and residences, arranged end to end.</h1>
+  <p class="lead">Three services, held to one standard and settled on one invoice.</p></div>
+ </div>
+ <div class="light sec wrap">
+  <article class="art">
+   <figure><img src="img/arrival.webp" srcset="img/arrival.webp 1672w, img/arrival-xl.webp 2508w" sizes="(max-width:980px) 110vw, 80vw" alt="A black executive car waiting outside an airport terminal at dusk as an airliner climbs away" width="1672" height="941" style="object-position:82% 50%"></figure>
+   <div>
+    <h2 class="d">Airport transfers</h2>
+    <p class="tx">Met at arrivals and driven to the door, from a single guest to a full delegation.</p>
+    <ul class="inc">
+     <li>The flight is followed, so the car is there when the aircraft lands, early or late.</li>
+     <li>The driver waits inside the terminal with a name board, or without one on request.</li>
+     <li>Driver and car details are sent before the pickup.</li>
+     <li>Child seats and extra luggage space are arranged in advance.</li>
+    </ul>
+    <p class="lbl">Booked by platforms, agencies, companies and hotels</p>
+   </div>
+  </article>
+  <article class="art">
+   <figure><img src="img/chauffeur.webp" srcset="img/chauffeur.webp 1672w, img/chauffeur-xl.webp 2508w" sizes="(max-width:980px) 110vw, 80vw" alt="A chauffeur in a dark suit and white gloves holding a car door open outside a hotel" width="1672" height="941" style="object-position:66% 50%"></figure>
+   <div>
+    <h2 class="d">Chauffeur by the hour</h2>
+    <p class="tx">A dedicated car and driver for meetings, roadshows and days that change shape as they go.</p>
+    <ul class="inc">
+     <li>The same driver for the whole engagement.</li>
+     <li>Routes and waiting planned around the schedule, and changed on the day when it moves.</li>
+     <li>Several cars coordinated for events and delegations.</li>
+     <li>One statement at the end, by day or by booking.</li>
+    </ul>
+    <p class="lbl">Booked for executives, events and delegations</p>
+   </div>
+  </article>
+  <article class="art">
+   <figure><img src="img/residence.webp" srcset="img/residence.webp 1672w, img/residence-xl.webp 2508w" sizes="(max-width:980px) 110vw, 80vw" alt="A residence lounge at dusk with a view across the water to a city skyline" width="1672" height="941" style="object-position:55% 50%"></figure>
+   <div>
+    <h2 class="d">Serviced residences</h2>
+    <p class="tx">Apartments we manage, prepared before arrival and looked after for the length of the stay.</p>
+    <ul class="inc">
+     <li>Prepared and inspected before each arrival.</li>
+     <li>Housekeeping through the stay.</li>
+     <li>Someone to call for anything in the apartment.</li>
+     <li>Arrival and departure transport arranged with the booking.</li>
+    </ul>
+    <p class="lbl">Booked for long stays, teams and families</p>
+   </div>
+  </article>
+ </div>
+ <div class="dark sec wrap">
+  <div class="two">
+   <div><h2 class="d h2">Vehicle classes</h2><p class="tx">The class is agreed with each booking and confirmed in writing.</p></div>
+   <div class="rows">
+    <div class="rw"><h3>Saloon</h3><p>Individual travellers and couples.</p></div>
+    <div class="rw"><h3>Executive saloon</h3><p>Executives and guests of honour.</p></div>
+    <div class="rw"><h3>SUV</h3><p>Families, and travellers with more luggage.</p></div>
+    <div class="rw"><h3>People carrier</h3><p>Small groups travelling together.</p></div>
+    <div class="rw"><h3>Minibus and coach</h3><p>Delegations and events, on request.</p></div>
+   </div>
+  </div>
+  <a class="btn" style="margin-top:clamp(40px,5vw,64px)" href="#contact">Ask about a booking</a>
+ </div>
+</section>
+
+<!-- PRIVATE OFFICE -->
+<section class="pg" data-page="private-office" data-title="The Private Office — Horus X">
+ <div class="phd px">
+  <img src="img/jet.webp" srcset="img/jet.webp 1672w, img/jet-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="A private jet with its stairs down at dusk and a black car waiting beside it" width="1672" height="941" style="object-position:72% 60%">
+  <div class="in"><h1 class="d">The Private Office</h1>
+  <p class="lead">For principals, families and delegations whose travel should be handled by name, by one person, and without being seen.</p></div>
+ </div>
+ <div class="po wrap">
+  <div class="card">
+   <img class="seal" src="img/seal-foil.svg" alt="" width="128" height="129">
+   <p class="ttl">HORUS X<br class="bm"> PRIVATE OFFICE</p>
+   <p class="by">Arrangements by appointment</p>
+   <ul>
+    <li><b>A named manager</b><span>One person holds the itinerary from the first call to the last departure, and answers the phone at any hour.</span></li>
+    <li><b>Arrivals without waiting</b><span>Guests are met at the aircraft or the private terminal wherever the airport allows it, and driven straight on.</span></li>
+    <li><b>Delegations that move as one</b><span>Several cars, one coordinator, timings agreed in advance with the principal's office or security team.</span></li>
+    <li><b>Residences made ready</b><span>Apartments prepared to the guest's own notes before the door is opened.</span></li>
+    <li><b>Kept private</b><span>No names on arrival boards unless asked for, and confidentiality agreements signed on request.</span></li>
+   </ul>
+   <a class="btn" href="#contact" data-as="A private client or family office" data-svc="Private Office arrangements">Request an appointment</a>
+   <p class="note">private@horusxglobal.com</p>
+  </div>
+ </div>
+ <div class="dark wrap" style="padding-bottom:clamp(72px,10vw,150px)">
+  <h2 class="d h2">How an engagement begins</h2>
+  <ol class="steps">
+   <li><h3>A first conversation</h3><p>In confidence, with the principal's office or family office.</p></li>
+   <li><h3>A written brief</h3><p>Preferences, people and timings are agreed once and kept on file.</p></li>
+   <li><h3>One manager from then on</h3><p>The same person arranges every journey and stay that follows.</p></li>
+  </ol>
+ </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="pg" data-page="destinations" data-title="Destinations — Horus X">
+ <div class="phd px">
+  <img src="img/city.webp" srcset="img/city.webp 1672w, img/city-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="A coastal business district at dusk seen from the air" width="1672" height="941" style="object-position:75% 55%">
+  <div class="in"><h1 class="d">Where we take travellers</h1>
+  <p class="lead">Transfers, chauffeurs and residences in the ten countries that receive the most international visitors, arranged through one desk.</p></div>
+ </div>
+ <div class="dark wrap" style="padding-bottom:clamp(72px,10vw,150px)">
+  <div class="dh"><span>Country</span><span>Gateways</span><span>Local time</span><span></span></div>
+  <div class="dest" id="dest"></div>
+  <p class="tx" style="margin-top:28px;max-width:60ch">Other airports in these countries, and journeys elsewhere, are arranged on request through the same desk.</p>
+ </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="pg" data-page="partners" data-title="Partners — Horus X">
+ <div class="phd px">
+  <img src="img/falcon.webp" srcset="img/falcon.webp 1672w, img/falcon-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="A peregrine falcon in flight above the clouds at sunrise" width="1672" height="941" style="object-position:68% 45%">
+  <div class="in"><h1 class="d">One partner behind the journeys you sell.</h1>
+  <p class="lead">For platforms, agencies, companies and hotels that put their own name on travel.</p></div>
+ </div>
+ <div class="light sec wrap">
+  <h2 class="d h2">Who we work with</h2>
+  <div class="cl">
+   <div><h3>Travel platforms</h3><p>Bookings arrive from your system and are fulfilled to your standards, with status reported back.</p></div>
+   <div><h3>Agencies and tour operators</h3><p>Transfers and stays for individual travellers and groups, quoted per itinerary.</p></div>
+   <div><h3>Companies and institutions</h3><p>Executive and delegation travel on a single account, with itemised invoicing.</p></div>
+   <div><h3>Hotels and residences</h3><p>Arrival and departure transport for your guests, run as an extension of your front desk.</p></div>
+  </div>
+  <hr class="hr">
+  <h2 class="d h2">Platforms we work with</h2>
+  <p class="lead" style="margin-top:20px">Travellers reach our residences and ground services through the platforms where the world books travel. Every booking that arrives from them is met, driven and looked after to the same standard.</p>
+  <ul class="chan">
+   <li><b>Airbnb</b><span>Residences</span></li><li><b>Booking.com</b><span>Residences</span></li><li><b>Vrbo</b><span>Residences</span></li>
+   <li><b>elife</b><span>Airport transfers</span></li><li><b>Mozio</b><span>Airport transfers</span></li><li><b>Welcome Pickups</b><span>Airport transfers</span></li>
+   <li><b>Talixo</b><span>Transfers and chauffeur</span></li><li><b>GET-E</b><span>Ground transport</span></li><li><b>Limousine Center</b><span>Chauffeur</span></li>
+  </ul>
+ </div>
+ <div class="dark sec wrap">
+  <div class="split">
+   <div>
+    <h2 class="d h2">Clear terms, one point of responsibility.</h2>
+    <div class="rows" style="margin-top:clamp(28px,4vw,48px)">
+     <div class="rw"><h3>One agreement</h3><p>Written commercial terms that cover every service and every city we arrange for you.</p></div>
+     <div class="rw"><h3>One desk</h3><p>A single operations desk, reachable at any hour, that owns each booking from request to receipt.</p></div>
+     <div class="rw"><h3>Your name, if you prefer</h3><p>White-label delivery: greetings, messages and paperwork can carry your brand instead of ours.</p></div>
+     <div class="rw"><h3>Settlement in your currency</h3><p>Invoices in the currency you work in, paid by bank transfer or secure payment link.</p></div>
+    </div>
+   </div>
+   <figure><img src="img/orbit-p.webp" srcset="img/orbit-p.webp 941w, img/orbit-p-xl.webp 1411w" sizes="(max-width:980px) 110vw, 80vw" alt="The Earth at night seen from orbit, its cities lit in gold, with sunrise on the horizon" width="941" height="1672" style="object-position:50% 30%"></figure>
+  </div>
+ </div>
+ <div class="light sec wrap">
+  <h2 class="d h2">Becoming a partner</h2>
+  <ol class="steps four">
+   <li><h3>Introduction</h3><p>You tell us what you sell, where, and to whom.</p></li>
+   <li><h3>Terms</h3><p>Rates, service levels and settlement are agreed in writing.</p></li>
+   <li><h3>Connection</h3><p>Bookings reach us from your own system or by email, whichever suits you.</p></li>
+   <li><h3>First journeys</h3><p>We deliver, report back on each booking and invoice on the agreed cycle.</p></li>
+  </ol>
+  <hr class="hr">
+  <p class="d amb">Our ambition is simple: to be the name the world's travel platforms rely on, wherever their travellers land.</p>
+  <a class="btn" style="margin-top:clamp(32px,4vw,52px)" href="#contact" data-as="A travel platform">Open a partner conversation</a>
+ </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="pg" data-page="technology" data-title="Technology — Horus X">
+ <div class="phd px">
+  <img src="img/eye.webp" srcset="img/eye.webp 1672w, img/eye-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="Close view of a falcon's head and eye" width="1672" height="941" style="object-position:78% 40%">
+  <div class="in"><h1 class="d">Run on our own systems, checked by people.</h1>
+  <p class="lead">Software we built for this work follows every booking. A member of our desk answers for it.</p></div>
+ </div>
+ <div class="light sec wrap">
+  <h2 class="d h2">From request to receipt</h2>
+  <ol class="steps">
+   <li><h3>Received</h3><p>The request arrives from a platform, a partner or a client and is read at once.</p></li>
+   <li><h3>Confirmed</h3><p>Details are checked and the booking is confirmed in writing.</p></li>
+   <li><h3>Assigned</h3><p>A driver and car, or a residence, are assigned and the guest is told who to expect.</p></li>
+   <li><h3>Followed</h3><p>The flight and the journey are followed until the guest is at the door.</p></li>
+   <li><h3>Completed</h3><p>The service is closed and anything unusual is recorded.</p></li>
+   <li><h3>Invoiced</h3><p>An itemised invoice goes out in the agreed currency.</p></li>
+  </ol>
+ </div>
+ <div class="dark sec wrap">
+  <div class="two">
+   <div><h2 class="d h2">Where we use artificial intelligence</h2><p class="tx">It does the reading and the watching. People make the decisions.</p></div>
+   <div class="rows">
+    <div class="rw"><h3>Reading requests</h3><p>Incoming requests are read as they arrive and a reply is drafted for the desk.</p></div>
+    <div class="rw"><h3>Watching for exceptions</h3><p>Anything unusual is flagged: a changed flight, a late confirmation, a detail that does not match.</p></div>
+    <div class="rw"><h3>A person decides</h3><p>A member of our desk reviews every exception before it reaches the traveller.</p></div>
+    <div class="rw"><h3>Nothing hidden from partners</h3><p>Partners see where each booking stands without having to ask.</p></div>
+   </div>
+  </div>
+ </div>
+ <div class="light sec wrap">
+  <div class="two">
+   <div><h2 class="d h2">Settlement without friction</h2></div>
+   <div>
+    <div class="rows">
+     <div class="rw"><h3>Your currency</h3><p>Invoices are issued in the currency you work in.</p></div>
+     <div class="rw"><h3>Your method</h3><p>Paid by bank transfer or by secure payment link.</p></div>
+     <div class="rw"><h3>One statement</h3><p>Every service is itemised, and accounts receive a single statement for the period.</p></div>
+    </div>
+    <div class="ccy" aria-label="Invoicing currencies"><span>GBP</span><span>USD</span><span>EUR</span><span>AED</span><span>SAR</span></div>
+   </div>
+  </div>
+ </div>
+ <div class="dark sec wrap">
+  <h2 class="d h2">One desk, across time zones</h2>
+  <div class="clk" aria-label="Local times"><div><span>London</span><b data-tz="Europe/London">--:--</b></div><div><span>Paris</span><b data-tz="Europe/Paris">--:--</b></div><div><span>Istanbul</span><b data-tz="Europe/Istanbul">--:--</b></div><div><span>Dubai</span><b data-tz="Asia/Dubai">--:--</b></div><div><span>Tokyo</span><b data-tz="Asia/Tokyo">--:--</b></div><div><span>New York</span><b data-tz="America/New_York">--:--</b></div></div>
+ </div>
+</section>
+
+<!-- COMPANY -->
+<section class="pg" data-page="company" data-title="Company — Horus X">
+ <div class="phd px">
+  <img src="img/orbit.webp" srcset="img/orbit.webp 1672w, img/orbit-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="The Earth at night seen from orbit, its cities lit in gold, with sunrise on the horizon" width="1672" height="941" style="object-position:72% 40%">
+  <div class="in"><h1 class="d">The company</h1>
+  <p class="lead">Horus X Ltd is registered in England and Wales and works to written terms.</p></div>
+ </div>
+ <div class="light sec wrap">
+  <div class="deed">
+   <h2 class="d">Statement of the Company</h2>
+   <p class="sub">Horus X Ltd, company number 16483511</p>
+   <ol>
+    <li><div><h3>The Company</h3><p>Horus X Ltd is a private company limited by shares, incorporated in England and Wales under company number 16483511.</p></div></li>
+    <li><div><h3>Principal activities</h3><p>The Company arranges ground transport, chauffeured travel and serviced accommodation for travel platforms, travel agencies, companies and private clients.</p></div></li>
+    <li><div><h3>Engagement</h3><p>Each engagement is governed by written terms agreed with the client. The client's agreement is with the Company, which answers to the client for the services it arranges.</p></div></li>
+    <li><div><h3>Suppliers</h3><p>Services are performed by the Company and by suppliers it appoints, who are held to the Company's standards.</p></div></li>
+    <li><div><h3>Confidentiality</h3><p>Information about guests is used only to deliver the services requested and is disclosed only to those who need it for that purpose.</p></div></li>
+    <li><div><h3>Governing law</h3><p>The Company's terms are governed by the laws of England and Wales.</p></div></li>
+   </ol>
+  </div>
+ </div>
+ <div class="light wrap" style="padding-bottom:clamp(72px,10vw,150px)">
+  <div class="reg">
+   <div class="sd">
+    <img src="img/seal-foil.svg" alt="Horus X seal" width="128" height="129">
+    <h2 class="d" style="font-size:clamp(32px,3.6vw,52px)">Registered particulars</h2>
+    <a class="ul" href="https://find-and-update.company-information.service.gov.uk/company/16483511" rel="noopener">View the public register</a>
+   </div>
+   <dl>
+    <div><dt>Company name</dt><dd>HORUS X LTD</dd></div>
+    <div><dt>Company number</dt><dd style="font-variant-numeric:tabular-nums;letter-spacing:.02em">16483511</dd></div>
+    <div><dt>Legal form</dt><dd>Private limited company</dd></div>
+    <div><dt>Jurisdiction</dt><dd>England and Wales</dd></div>
+    <div><dt>Registered office</dt><dd>112 Loughborough House, 2 Honour Gardens, London RM8 2GJ, United Kingdom</dd></div>
+    <div><dt>Nature of business</dt><dd>Travel agency, tour operator and reservation services</dd></div>
+   </dl>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="pg" data-page="contact" data-title="Enquiries — Horus X">
+ <div class="phd px">
+  <img src="img/lobby.webp" srcset="img/lobby.webp 1672w, img/lobby-xl.webp 2508w" sizes="(max-width:700px) 240vw, 100vw" alt="A hotel concierge desk in dark marble and brass at night" width="1672" height="941" style="object-position:78% 50%">
+  <div class="in"><h1 class="d">Start with a conversation.</h1>
+  <p class="lead">Write to the desk that fits, or prepare a message below.</p></div>
+ </div>
+ <div class="dark wrap" style="padding-bottom:clamp(48px,6vw,90px)">
+  <div class="desks">
+   <div class="desk"><p class="lbl">Partnerships and corporate accounts</p><p class="ad"><a href="mailto:partners@horusxglobal.com">partners@horusxglobal.com</a></p><button class="cp" type="button" data-copy="partners@horusxglobal.com">Copy address</button></div>
+   <div class="desk"><p class="lbl">Reservations</p><p class="ad"><a href="mailto:reservations@horusxglobal.com">reservations@horusxglobal.com</a></p><button class="cp" type="button" data-copy="reservations@horusxglobal.com">Copy address</button></div>
+   <div class="desk"><p class="lbl">Private Office</p><p class="ad"><a href="mailto:private@horusxglobal.com">private@horusxglobal.com</a></p><button class="cp" type="button" data-copy="private@horusxglobal.com">Copy address</button></div>
+  </div>
+ </div>
+ <div class="light sec wrap">
+  <h2 class="d h2">Prepare a message</h2>
+  <p class="lead" style="margin-top:18px">Fill in what you know. The message is written out for you to copy or send from your own email; nothing is sent from this page.</p>
+  <form class="form" id="enq">
+   <label class="f">I am writing as<select name="as"><option>A travel platform</option><option>An agency or tour operator</option><option>A company or institution</option><option>A hotel or residence</option><option>A private client or family office</option></select></label>
+   <label class="f">Service<select name="s"><option>Airport transfers</option><option>Chauffeur by the hour</option><option>Serviced residences</option><option>Private Office arrangements</option><option>Several of these</option></select></label>
+   <label class="f">Country<select name="c"><option>France</option><option>Spain</option><option>United States</option><option>Türkiye</option><option>Italy</option><option>Mexico</option><option>United Kingdom</option><option>Germany</option><option>Japan</option><option>Greece</option><option>Elsewhere</option></select></label>
+   <label class="f">Dates<input name="d" placeholder="e.g. 3 to 7 March" autocomplete="off"></label>
+   <label class="f">Your name<input name="n" autocomplete="name"></label>
+   <label class="f">Organisation<input name="o" autocomplete="organization"></label>
+   <label class="f wide">Details<textarea name="m" placeholder="Guests, flights, addresses, anything we should know"></textarea></label>
+   <div class="wide"><button class="btn" type="submit">Prepare message</button></div>
+  </form>
+  <div class="out" id="out" hidden>
+   <p class="lbl">Ready to send to <b id="to" style="color:var(--txt)"></b></p>
+   <textarea id="msg" readonly aria-label="Prepared message"></textarea>
+   <div class="acts"><button class="btn" type="button" id="cpm">Copy message</button><a class="btn ghost" id="mail">Open in mail app</a></div>
+   <p class="msg" id="st" role="status"></p>
+  </div>
+ </div>
+ <div class="light wrap" style="padding-bottom:clamp(72px,10vw,150px)">
+  <p class="lbl">Notices by post</p>
+  <p style="font:400 21px/1.45 'News',Georgia,serif;margin-top:10px;max-width:30ch">Horus X Ltd, 112 Loughborough House, 2 Honour Gardens, London RM8 2GJ, United Kingdom</p>
+ </div>
+</section>
+
+</main>
+
+<footer class="ft dark">
+ <div class="c4">
+  <div><h4>Horus X Ltd</h4><p style="max-width:34ch">112 Loughborough House, 2 Honour Gardens, London RM8 2GJ, United Kingdom. Registered in England and Wales, no. 16483511.</p></div>
+  <div><h4>Services</h4><ul><li><a href="#services">Airport transfers</a></li><li><a href="#services">Chauffeur</a></li><li><a href="#services">Residences</a></li><li><a href="#private-office">Private Office</a></li></ul></div>
+  <div><h4>Company</h4><ul><li><a href="#destinations">Destinations</a></li><li><a href="#partners">Partners</a></li><li><a href="#technology">Technology</a></li><li><a href="#company">Particulars</a></li><li><a href="#contact">Enquiries</a></li></ul></div>
+  <div><h4>Legal</h4><ul><li><button type="button" data-dlg="privacy">Privacy</button></li><li><button type="button" data-dlg="terms">Website terms</button></li><li><button type="button" data-dlg="cookies">Cookies</button></li></ul></div>
+ </div>
+ <svg class="big" viewBox="0 0 1000 132" aria-hidden="true"><defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7d6034"/><stop offset=".35" stop-color="#d9c08a"/><stop offset=".5" stop-color="#f3e3b8"/><stop offset=".7" stop-color="#c3a36a"/><stop offset="1" stop-color="#6f5430"/></linearGradient></defs><text x="0" y="128" textLength="1000" lengthAdjust="spacingAndGlyphs" font-family="Arch, sans-serif" font-weight="600" font-size="176" style="font-stretch:125%">HORUS <tspan fill="url(#fg)">X</tspan></text></svg>
+ <div class="legal"><span>© 2026 Horus X Ltd. All rights reserved.</span><span>horusxglobal.com</span></div>
+</footer>
+
+<dialog id="privacy"><h3>Privacy</h3><p>This website does not use analytics or advertising tools. The enquiry form only writes out a message on your own device; nothing is transmitted to us until you send it yourself.</p><p>If you write to us, Horus X Ltd uses your message and contact details only to reply and to arrange the services you ask for, and keeps them no longer than that requires.</p><p>Questions about your data: partners@horusxglobal.com.</p><form method="dialog"><button class="btn">Close</button></form></dialog>
+<dialog id="terms"><h3>Website terms</h3><p>The information on this website is general and is not an offer. Services are provided under written terms agreed with each client or for each booking.</p><p>This website is operated by Horus X Ltd, registered in England and Wales, company number 16483511.</p><form method="dialog"><button class="btn">Close</button></form></dialog>
+<dialog id="cookies"><h3>Cookies</h3><p>This website sets no cookies.</p><form method="dialog"><button class="btn">Close</button></form></dialog>
+
+<script>
+{
+ const d=document,html=d.documentElement,$=(s,r)=>(r||d).querySelector(s),$$=(s,r)=>[...(r||d).querySelectorAll(s)];
+
+ /* opening: lift only when the fonts and the first picture are ready */
+ let up=false;const lift=()=>{if(up)return;up=true;html.classList.add('rdy')};
+ setTimeout(lift,4500);
+ try{
+  const hero=$('.hero img'),t0=performance.now();
+  const fonts=d.fonts?Promise.all([d.fonts.load('300 40px News'),d.fonts.load('400 16px Arch')]).catch(()=>{}):Promise.resolve();
+  const pic=(hero.complete&&hero.naturalWidth?Promise.resolve():new Promise(r=>{hero.addEventListener('load',r,{once:true});hero.addEventListener('error',r,{once:true})})).then(()=>hero.decode?hero.decode().catch(()=>{}):0);
+  Promise.all([fonts,pic]).then(()=>setTimeout(lift,Math.max(0,900-(performance.now()-t0))));
+ }catch(e){lift()}
+
+ /* destinations */
+ const DEST=[['France','Paris CDG · Nice NCE','Europe/Paris'],['Spain','Madrid MAD · Barcelona BCN','Europe/Madrid'],['United States','New York JFK · Miami MIA','America/New_York'],['Türkiye','Istanbul IST · Antalya AYT','Europe/Istanbul'],['Italy','Rome FCO · Milan MXP','Europe/Rome'],['Mexico','Mexico City MEX · Cancún CUN','America/Mexico_City'],['United Kingdom','London LHR · London LGW','Europe/London'],['Germany','Frankfurt FRA · Munich MUC','Europe/Berlin'],['Japan','Tokyo HND · Osaka KIX','Asia/Tokyo'],['Greece','Athens ATH · Mykonos JMK','Europe/Athens']];
+ $('#dest').innerHTML=DEST.map(x=>'<div class="dr"><h2>'+x[0]+'</h2><span class="gw">'+x[1]+'</span><time data-tz="'+x[2]+'">--:--</time><a href="#contact" data-c="'+x[0]+'">Enquire</a></div>').join('');
+
+ /* clocks */
+ const clocks=$$('[data-tz]');
+ const tick=()=>clocks.forEach(c=>{try{c.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:c.dataset.tz}).format(new Date())}catch(e){}});
+ tick();setInterval(tick,20000);
+
+ /* menu */
+ const menu=$('#menu'),mb=$('#mb');
+ const closeMenu=()=>{menu.classList.remove('open');menu.setAttribute('aria-hidden','true');mb.setAttribute('aria-expanded','false')};
+ mb.addEventListener('click',()=>{menu.classList.add('open');menu.setAttribute('aria-hidden','false');mb.setAttribute('aria-expanded','true')});
+ $('#mx').addEventListener('click',closeMenu);
+
+ /* pages */
+ const pages=$$('.pg'),names=pages.map(p=>p.dataset.page);let cur='home';
+ const show=(n,first)=>{
+  if(!names.includes(n))n='home';cur=n;
+  pages.forEach(p=>p.classList.toggle('cur',p.dataset.page===n));
+  $$('.nav a').forEach(a=>{if(a.getAttribute('href')==='#'+n)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  d.title=pages[names.indexOf(n)].dataset.title;
+  closeMenu();if(!first)scrollTo(0,0);
+ };
+ addEventListener('hashchange',()=>show(location.hash.slice(1)));
+ show(location.hash.slice(1),true);
+
+ /* enquiry */
+ const enq=$('#enq'),out=$('#out'),msg=$('#msg'),st=$('#st'),mail=$('#mail'),to=$('#to');
+ const setSel=(name,val)=>{const s=enq.elements[name];if(s&&val)[...s.options].forEach(o=>{if(o.text===val)s.value=o.value})};
+ d.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="#"]');if(!a)return;
+  if(a.dataset.c)setSel('c',a.dataset.c);
+  if(a.dataset.as)setSel('as',a.dataset.as);
+  if(a.dataset.svc)setSel('s',a.dataset.svc);
+  if(a.getAttribute('href')==='#'+cur){e.preventDefault();closeMenu();scrollTo(0,0)}
+ });
+ $('#plan').addEventListener('submit',e=>{e.preventDefault();const f=e.target.elements;setSel('s',f.s.value);setSel('c',f.c.value);enq.elements.d.value=f.d.value;if(cur==='contact')scrollTo(0,0);else location.hash='contact'});
+ enq.addEventListener('submit',e=>{
+  e.preventDefault();const v=k=>(enq.elements[k].value||'').trim();
+  const addr=v('as').indexOf('private')>-1||v('s').indexOf('Private')>-1?'private@horusxglobal.com':'partners@horusxglobal.com';
+  const lines=['To: '+addr,'','Writing as: '+v('as'),'Service: '+v('s'),'Country: '+v('c')];
+  if(v('d'))lines.push('Dates: '+v('d'));if(v('n'))lines.push('Name: '+v('n'));if(v('o'))lines.push('Organisation: '+v('o'));
+  if(v('m'))lines.push('','Details:',v('m'));
+  const body=lines.slice(2).join('\n');
+  msg.value=lines.join('\n');to.textContent=addr;st.textContent='';
+  mail.href='mailto:'+addr+'?subject='+encodeURIComponent('Enquiry: '+v('s')+', '+v('c'))+'&body='+encodeURIComponent(body);
+  out.hidden=false;out.scrollIntoView({block:'nearest'});
+ });
+ const copy=(text,done)=>{
+  const ok=()=>done(true),old=()=>{try{const t=d.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.style.cssText='position:fixed;top:0;left:0;opacity:0';d.body.appendChild(t);t.select();const r=d.execCommand('copy');t.remove();done(r)}catch(e){done(false)}};
+  try{navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(text).then(ok,old):old()}catch(e){old()}
+ };
+ $('#cpm').addEventListener('click',()=>copy(msg.value,r=>{st.textContent=r?'Copied. Paste it into an email to '+to.textContent+'.':'Select the text above and copy it, then send it to '+to.textContent+'.';if(!r){msg.focus();msg.select()}}));
+ $$('.cp').forEach(b=>b.addEventListener('click',()=>copy(b.dataset.copy,r=>{b.textContent=r?'Copied':b.dataset.copy;setTimeout(()=>b.textContent='Copy address',2200)})));
+
+ /* hero: gold trails and city glints over the Earth picture (ambient; pauses when the hero is not on screen) */
+ try{(()=>{
+  const img=$('#himg'),cv=$('#hcv'),hero=$('.hero');if(!cv||!cv.getContext||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const ctx=cv.getContext('2d'),cl=(v,a,b)=>Math.min(b,Math.max(a,v));
+  let W0=1672,H0=941,w=0,h=0,sc=1,ox=0,oy=0,pts=[],run=false,raf=0,trails=[];const t0=performance.now();
+  const LAND=[{p:[[.02,.86],[.3,.52],[.62,.36],[1.06,.22]],dur:9.5,off:0,lw:1.6},{p:[[-.06,.66],[.28,.4],[.6,.26],[1.06,.1]],dur:12.5,off:.38,lw:1.1},{p:[[.34,.7],[.56,.5],[.78,.42],[1.06,.36]],dur:8.2,off:.7,lw:1.3}],
+        PORT=[{p:[[-.1,.36],[.25,.2],[.7,.17],[1.1,.24]],dur:9.5,off:0,lw:1.5},{p:[[-.1,.5],[.3,.36],[.7,.33],[1.1,.4]],dur:12.5,off:.38,lw:1.1},{p:[[.1,.62],[.4,.46],[.75,.4],[1.1,.38]],dur:8.2,off:.7,lw:1.2}];
+  const dims=()=>{W0=img.naturalWidth||1672;H0=img.naturalHeight||941;trails=(H0>W0?PORT:LAND).map(t=>({dur:t.dur,off:t.off,lw:t.lw,p:t.p.map(q=>[q[0]*W0,q[1]*H0])}))};
+  const bez=(p,t)=>{const u=1-t,a=u*u*u,b=3*u*u*t,c=3*u*t*t,e=t*t*t;return[a*p[0][0]+b*p[1][0]+c*p[2][0]+e*p[3][0],a*p[0][1]+b*p[1][1]+c*p[2][1]+e*p[3][1]]};
+  const X=x=>ox+x*sc,Y=y=>oy+y*sc;
+  const size=()=>{dims();const dpr=Math.min(devicePixelRatio||1,2);w=cv.clientWidth;h=cv.clientHeight;if(!w||!h)return;cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);sc=Math.max(w/W0,h/H0);const op=(getComputedStyle(img).objectPosition||'70% 50%').split(' ').map(v=>parseFloat(v)/100);ox=(w-W0*sc)*(isNaN(op[0])?.7:op[0]);oy=(h-H0*sc)*(isNaN(op[1])?.5:op[1])};
+  const sample=()=>{dims();const cw=H0>W0?236:418,k=W0/cw,ch=Math.round(H0/k),top=H0*(H0>W0?.27:.34),c=d.createElement('canvas');c.width=cw;c.height=ch;const g=c.getContext('2d');let px;try{g.drawImage(img,0,0,cw,ch);px=g.getImageData(0,0,cw,ch).data}catch(e){return}
+   const L=(x,y)=>{const i=(y*cw+x)*4;return(px[i]+px[i+1]+px[i+2])/3},cand=[];
+   for(let y=2;y<ch-2;y++)for(let x=2;x<cw-2;x++){if(y*k<top)continue;const i=(y*cw+x)*4,r=px[i],gg=px[i+1],b=px[i+2];if(!(r>190&&gg>130&&b<150&&r-b>75))continue;const l=(r+gg+b)/3,n=(L(x-2,y)+L(x+2,y)+L(x,y-2)+L(x,y+2))/4;if(l-n<24)continue;cand.push([x*k+k/2,y*k+k/2])}
+   for(let i=cand.length-1;i>0;i--){const j=Math.random()*(i+1)|0,t=cand[i];cand[i]=cand[j];cand[j]=t}
+   pts=cand.slice(0,220).map(q=>({x:q[0],y:q[1],ph:Math.random()*6.283,sp:.5+Math.random()*1.7,sz:.6+Math.random()*1.3}))};
+  const draw=now=>{
+   const t=(now-t0)/1000;ctx.clearRect(0,0,w,h);ctx.lineCap='round';
+   for(const tr of trails){
+    ctx.beginPath();for(let i=0;i<=48;i++){const q=bez(tr.p,i/48);i?ctx.lineTo(X(q[0]),Y(q[1])):ctx.moveTo(X(q[0]),Y(q[1]))}ctx.strokeStyle='rgba(240,217,153,.08)';ctx.lineWidth=1;ctx.stroke();
+    const ph=((t/tr.dur)+tr.off)%1,len=.24,N=32;
+    for(let i=0;i<N;i++){const a0=ph-len+len*i/N,a1=ph-len+len*(i+1)/N;if(a1<=0||a0>=1)continue;const p0=bez(tr.p,cl(a0,0,1)),p1=bez(tr.p,cl(a1,0,1)),k=i/N;ctx.beginPath();ctx.moveTo(X(p0[0]),Y(p0[1]));ctx.lineTo(X(p1[0]),Y(p1[1]));ctx.strokeStyle='rgba(247,222,160,'+(.85*k*k).toFixed(3)+')';ctx.lineWidth=tr.lw*(.35+k);ctx.stroke()}
+    if(ph>0&&ph<1){const q=bez(tr.p,ph),hx=X(q[0]),hy=Y(q[1]),hg=ctx.createRadialGradient(hx,hy,0,hx,hy,9);hg.addColorStop(0,'rgba(255,244,214,.8)');hg.addColorStop(1,'rgba(255,244,214,0)');ctx.fillStyle=hg;ctx.beginPath();ctx.arc(hx,hy,9,0,6.283);ctx.fill()}
+   }
+   const zs=cl(sc,.5,1);
+   for(const p of pts){const v=Math.sin(t*p.sp+p.ph);if(v<.55)continue;const al=(v-.55)/.45,r=p.sz*(1+al)*zs,x=X(p.x),y=Y(p.y);if(x<-10||x>w+10||y<-10||y>h+10)continue;ctx.fillStyle='rgba(255,210,130,'+(al*.22).toFixed(3)+')';ctx.beginPath();ctx.arc(x,y,r*2.6,0,6.283);ctx.fill();ctx.fillStyle='rgba(255,236,190,'+(al*.95).toFixed(3)+')';ctx.beginPath();ctx.arc(x,y,r,0,6.283);ctx.fill()}
+   if(run)raf=requestAnimationFrame(draw);
+  };
+  const start=()=>{if(run)return;size();run=true;raf=requestAnimationFrame(draw)},stop=()=>{run=false;cancelAnimationFrame(raf)};
+  const boot=()=>{sample();size();if('IntersectionObserver' in window)new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop())).observe(hero);else start();let rw=innerWidth;addEventListener('resize',()=>{if(innerWidth!==rw){rw=innerWidth;size()}})};
+  let booted=false;const go=()=>{if(booted){sample();size()}else{booted=true;boot()}};img.addEventListener('load',go);if(img.complete&&img.naturalWidth)go();
+ })()}catch(e){}
+
+ /* dialogs */
+ $$('[data-dlg]').forEach(b=>b.addEventListener('click',()=>{const g=d.getElementById(b.dataset.dlg);g&&g.showModal&&g.showModal()}));
+}
+</script>
+</body>
+</html>

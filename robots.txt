@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://horusxglobal.com/sitemap.xml
